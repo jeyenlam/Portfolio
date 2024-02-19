@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "durer";
+  src: url("../fonts/durer-webfont.woff2") format("woff2"), url("../fonts/durer-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  cursor: default;
+  caret-color: transparent;
+}
+
+p {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "durer", sans-serif;
+  font-size: 10em;
+  white-space: nowrap;
+}
+
+span {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+a:-webkit-any-link {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  display: inline-block;
+}
+
+.active {
+  background-color: black;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 20px;
+}
+
+.navbar {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3rem;
+  z-index: 3000;
+}
+.navbar button {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+}
+.navbar ul li {
+  list-style: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.experience-skills-con {
+  display: flex;
+  gap: 2rem;
+}
+
+.item-con:hover {
+  transform: scale(1.05);
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.page {
+  width: 100%;
+  padding: 0 5rem;
+  overflow: hidden;
+}
+.page .about-page {
+  margin-top: 6rem;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.page .about-page p {
+  width: 60%;
+}
+.page .about-page p a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: -2px;
+}
+.page .about-page h1 {
+  font-family: "durer", sans-serif;
+  font-size: 10em;
+  white-space: nowrap;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.page .extended-about-page {
+  margin-top: 6rem;
+  width: 100%;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page .extended-about-page .extended-about-page .tech-stack-con {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+.page .extended-about-page .extended-about-page .item-con {
+  padding: 0.2rem 0.5rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+  border: 2px solid black;
+  text-align: centers;
+}
+.page .work-experience-page {
+  margin-top: 6rem;
+  width: 100%;
+  padding-top: 2rem;
+  color: white;
+}
+.page .work-experience-page a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: -2px;
+}
+.page .work-experience-page a:-webkit-any-link {
+  color: white;
+  text-decoration: none;
+}
+.page .work-experience-page a:hover::after {
+  background-color: white;
+}
+.page .work-experience-page h1 {
+  color: black;
+}
+.page .work-experience-page .experience-cards-con {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.page .work-experience-page .experience-card {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1rem;
+}
+.page .work-experience-page .experience-card .experience-title h2 {
+  font-weight: 500;
+}
+.page .work-experience-page .experience-card .experience-title h2 span {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+}
+.page .work-experience-page .experience-card .experience-title .duration {
+  opacity: 0.5;
+}
+.page .projects-page {
+  margin-top: 6rem;
+  width: 100%;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.page .projects-page .project-page-level1 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.page .projects-page .project-page-level1 .project-cards-con .project-card {
+  width: 45rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0 5px black;
+  padding: 2rem;
+}
+.page .projects-page .project-page-level1 .project-cards-con .project-card .project-title {
+  display: flex;
+  align-items: center;
+}
+.page .projects-page .project-page-level1 .project-cards-con .project-card .project-title img {
+  margin-left: 10px;
+}
+.page .projects-page .project-page-level1 .project-cards-con .project-card .skills-con {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.page .projects-page .project-page-level1 .project-cards-con .project-card .skills-con .box {
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.page .projects-page .buttons-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+.page .projects-page .buttons-con button {
+  border: 2px solid black;
+  width: 2rem;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+.page .projects-page .buttons-con button:active {
+  background-color: black;
+  color: white;
+  transition: ease-in;
+}
+.page .contact-page {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding-top: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.page .contact-page .img-div img {
+  width: 200px;
+  box-shadow: 20px 20px black;
+}
+.page .contact-page p {
+  padding: 3rem;
+}
+.page .contact-page .contact-icons-con {
+  display: flex;
+  gap: 2rem;
+}
+.page .contact-page .contact-icons-con img {
+  width: 35px !important;
+}
+.page .contact-page .contact-icons-con img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .navbar button {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar ul {
+    display: none;
+    justify-content: space-around;
+  }
+  #open {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: unset;
+    height: 100%;
+  }
+  #open .menu-icon {
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #open ul {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between !important;
+  }
+  .page {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .page .about-page {
+    row-gap: 5rem;
+    justify-content: center;
+  }
+  .page .about-page p {
+    width: 100%;
+  }
+  .page .about-page h1 {
+    font-size: 7rem;
+  }
+  .page .extended-about-page .item-con {
+    padding: 0 0.3rem !important;
+  }
+  .page .work-experience-page .experience-card .experience-skills-con .item-con {
+    font-size: 0.7rem;
+  }
+  .page .projects-page {
+    margin-top: 6rem;
+    width: 100%;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card {
+    width: 20rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 5px black;
+    padding: 2rem;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card .project-title {
+    display: block;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card .project-title h2 {
+    font-size: 1.2rem;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card .project-title img {
+    width: 20px;
+    padding: 0.5rem 0;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card p {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card .skills-con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .page .projects-page .project-page-level1 .project-cards-con .project-card .skills-con .box {
+    font-size: 0.7rem;
+  }
+  .page .projects-page .buttons-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+  }
+  .page .projects-page .buttons-con button {
+    border: 2px solid black;
+    width: 2rem;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-weight: 500;
+  }
+  .page .projects-page .buttons-con button:active {
+    background-color: black;
+    color: white;
+    transition: ease-in;
+  }
+}/*# sourceMappingURL=index.css.map */

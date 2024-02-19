@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'durer';
+  src: url('../fonts/durer-webfont.woff2') format('woff2'),
+       url('../fonts/durer-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Font-family
+$newsreader: "Newsreader", serif;
+$inter: "Inter", sans-serif;
+$durer: 'durer', sans-serif;
+
+//Buttons
+@mixin buttonStyle {
+  background: none;
+  border: 3px solid black;
+  padding: 1rem;
+  height: 4rem;
+  text-align: center;
+  font-family: $inter;
+}
+
+@mixin pStyle{
+  font-size: .9rem;
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+@mixin itemConStyle{
+  padding: .2rem .5rem;
+  margin: .5rem;
+  border-radius: 20px;
+  border: 2px solid black;
+  text-align: centers;
+}
+
+@mixin pageOffsetStyle{
+  margin-top: 6rem;
+  width: 100%;
+  // height: 90%;
+}
+
+@mixin aHoverUnderlineStyle{
+  a:hover{
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: black;
+      margin-top: -2px;
+    }
+  }
+}
